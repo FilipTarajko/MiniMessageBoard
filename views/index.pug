@@ -3,5 +3,5 @@ extends layout
 block content
   h1= title
   for document in messages 
-    p (#{document.added.getHours()}:#{document.added.getMinutes()}) #{document.user}: #{document.text}
+    p (#{document.added.toLocaleDateString()}, #{document.added.toLocaleTimeString()}) #{document.user}: #{document.text}
   a(href='/new') Create a new message
