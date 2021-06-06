@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  <form method="POST" action="/new">
+    input(type='text', name='author', value='author')
+    br
+    br
+    input(type='text', name='message', value='message')
+    br
+    br
+    input(type="submit")
+  </form>
+  br
+  a(href='/') Back to main page
